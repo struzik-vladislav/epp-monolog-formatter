@@ -1,4 +1,4 @@
-# EPP Formatter
+# EPP Formatter [![Travis](https://img.shields.io/travis/struzik-vladislav/epp-monolog-formatter.svg)](https://travis-ci.org/struzik-vladislav/epp-monolog-formatter)
 
 A EPP requests/responses formatter for Monolog. Proposed for hiding authorization information of clients, domains and contacts in logs.
 
