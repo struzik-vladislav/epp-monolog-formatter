@@ -5,7 +5,9 @@ php:
   - 7.1
   - hhvm
 
-# Install dependencies before testing
 before_script:
   - composer self-update
   - composer install --dev
+
+script:
+  - vendor/bin/phpunit tests/
