@@ -9,7 +9,6 @@ use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 use Struzik\EPPMonolog\Formatter\EPPFormatter;
 
-
 $message = <<<'XML'
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <epp xmlns="urn:ietf:params:xml:ns:epp-1.0">
@@ -42,4 +41,29 @@ $handler->setFormatter(new EPPFormatter());
 $log->pushHandler($handler);
 
 $log->addInfo($message);
+/*
+[2017-04-30 18:09:28] EPPFormatter DEMO.INFO: <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<epp xmlns="urn:ietf:params:xml:ns:epp-1.0">
+    <command>
+        <login>
+            <clID>ClientX</clID>
+            <pw>*****</pw>
+            <newPW>*****</newPW>
+            <options>
+                <version>1.0</version>
+                <lang>en</lang>
+            </options>
+            <svcs>
+                <objURI>urn:ietf:params:xml:ns:obj1</objURI>
+                <objURI>urn:ietf:params:xml:ns:obj2</objURI>
+                <objURI>urn:ietf:params:xml:ns:obj3</objURI>
+                <svcExtension>
+                    <extURI>http://custom/obj1ext-1.0</extURI>
+                </svcExtension>
+            </svcs>
+        </login>
+        <clTRID>ABC-12345</clTRID>
+    </command>
+</epp>
+*/
 ```
