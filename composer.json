@@ -1,0 +1,29 @@
+{
+    "name": "struzik-vladislav/epp-monolog-formatter",
+    "description": "Monolog formatter for EPP requests/responses",
+    "keywords": ["epp", "monolog", "log", "formatter"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vladislav Struzik",
+            "email": "vladislav@struzik.blog"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "monolog/monolog": "~1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Struzik\\EPPMonolog\\Formatter\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Struzik\\EPPMonolog\\Formatter\\": "tests/"
+        }
+    }
+}
