@@ -7,7 +7,7 @@ use Monolog\Formatter\LineFormatter;
 class EPPFormatterTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @covers Struzik\EPPMonolog\Formatter\EPPFormatter::format
+     * @covers \Struzik\EPPMonolog\Formatter\EPPFormatter::format
      */
     public function testHideDomainAuthInfo()
     {
@@ -67,7 +67,7 @@ XML;
     }
 
     /**
-     * @covers Struzik\EPPMonolog\Formatter\EPPFormatter::format
+     * @covers \Struzik\EPPMonolog\Formatter\EPPFormatter::format
      */
     public function testHideContactAuthInfo()
     {
@@ -127,7 +127,7 @@ XML;
     }
 
     /**
-     * @covers Struzik\EPPMonolog\Formatter\EPPFormatter::format
+     * @covers \Struzik\EPPMonolog\Formatter\EPPFormatter::format
      */
     public function testHideClientsAuthInfo()
     {
