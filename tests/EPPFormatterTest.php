@@ -3,13 +3,14 @@
 namespace Struzik\EPPMonolog\Formatter;
 
 use Monolog\Formatter\LineFormatter;
+use PHPUnit\Framework\TestCase;
 
-class EPPFormatterTest extends \PHPUnit_Framework_TestCase
+class EPPFormatterTest extends TestCase
 {
     /**
      * @covers \Struzik\EPPMonolog\Formatter\EPPFormatter::format
      */
-    public function testHideDomainAuthInfo()
+    public function testHideDomainAuthInfo(): void
     {
         $xmlInput = <<<'XML'
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -69,7 +70,7 @@ XML;
     /**
      * @covers \Struzik\EPPMonolog\Formatter\EPPFormatter::format
      */
-    public function testHideContactAuthInfo()
+    public function testHideContactAuthInfo(): void
     {
         $xmlInput = <<<'XML'
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -129,7 +130,7 @@ XML;
     /**
      * @covers \Struzik\EPPMonolog\Formatter\EPPFormatter::format
      */
-    public function testHideClientsAuthInfo()
+    public function testHideClientsAuthInfo(): void
     {
         $xmlInput = <<<'XML'
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>

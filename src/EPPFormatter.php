@@ -9,7 +9,7 @@ class EPPFormatter extends LineFormatter
     /**
      * {@inheritdoc}
      */
-    public function format(array $record)
+    public function format(array $record): string
     {
         $line = parent::format($record);
 
