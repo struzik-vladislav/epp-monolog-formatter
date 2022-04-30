@@ -1,4 +1,9 @@
 # EPP Formatter
+![Build Status](https://github.com/struzik-vladislav/epp-monolog-formatter/actions/workflows/ci.yml/badge.svg?branch=master)
+[![Latest Stable Version](https://img.shields.io/github/v/release/struzik-vladislav/epp-monolog-formatter?sort=semver&style=flat-square)](https://packagist.org/packages/struzik-vladislav/epp-monolog-formatter)
+[![Total Downloads](https://img.shields.io/packagist/dt/struzik-vladislav/epp-monolog-formatter?style=flat-square)](https://packagist.org/packages/struzik-vladislav/epp-monolog-formatter/stats)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
+[![StandWithUkraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://github.com/vshymanskyy/StandWithUkraine/blob/main/docs/README.md)
 
 A EPP requests/responses formatter for Monolog. Proposed for hiding authorization information of clients, domains and contacts in logs.
 

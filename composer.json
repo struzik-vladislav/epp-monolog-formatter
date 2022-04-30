@@ -25,5 +25,8 @@
         "psr-4": {
             "Struzik\\EPPMonolog\\Formatter\\": "tests/"
         }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit tests/"
     }
 }
