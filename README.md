@@ -10,6 +10,7 @@ A EPP requests/responses formatter for Monolog. Proposed for hiding authorizatio
 ## Usage
 
 ```php
+use Monolog\Level;
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 use Struzik\EPPMonolog\Formatter\EPPFormatter;
@@ -41,13 +42,13 @@ $message = <<<'XML'
 XML;
 
 $log = new Logger('EPPFormatter DEMO');
-$handler = new StreamHandler('php://stdout', Logger::DEBUG);
-$handler->setFormatter(new EPPFormatter());
+$handler = new StreamHandler('php://stdout', Level::Debug);
+$handler->setFormatter(new EPPFormatter(allowInlineLineBreaks: true));
 $log->pushHandler($handler);
 
-$log->addInfo($message);
+$log->info($message);
 /*
-[2017-04-30 18:09:28] EPPFormatter DEMO.INFO: <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+[2023-08-22T21:02:54.922492+03:00] EPPFormatter DEMO.INFO: <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <epp xmlns="urn:ietf:params:xml:ns:epp-1.0">
     <command>
         <login>
@@ -69,6 +70,6 @@ $log->addInfo($message);
         </login>
         <clTRID>ABC-12345</clTRID>
     </command>
-</epp>
+</epp> [] []
 */
 ```
