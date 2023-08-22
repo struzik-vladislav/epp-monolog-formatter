@@ -3,13 +3,14 @@
 namespace Struzik\EPPMonolog\Formatter;
 
 use Monolog\Formatter\LineFormatter;
+use Monolog\LogRecord;
 
 class EPPFormatter extends LineFormatter
 {
     /**
      * {@inheritdoc}
      */
-    public function format(array $record): string
+    public function format(LogRecord $record): string
     {
         $line = parent::format($record);
 

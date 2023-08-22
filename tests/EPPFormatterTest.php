@@ -3,6 +3,8 @@
 namespace Struzik\EPPMonolog\Formatter;
 
 use Monolog\Formatter\LineFormatter;
+use Monolog\Level;
+use Monolog\LogRecord;
 use PHPUnit\Framework\TestCase;
 
 class EPPFormatterTest extends TestCase
@@ -45,24 +47,10 @@ XML;
 </epp>
 XML;
         $eppFormatter = new EPPFormatter('%message%');
-        $eppMessage = $eppFormatter->format([
-            'level_name' => 'DEBUG',
-            'channel' => 'default',
-            'context' => [],
-            'datetime' => new \DateTimeImmutable(),
-            'extra' => [],
-            'message' => $xmlInput,
-        ]);
+        $eppMessage = $eppFormatter->format(new LogRecord(new \DateTimeImmutable(), 'default', Level::Debug, $xmlInput));
 
         $lineFormatter = new LineFormatter('%message%');
-        $lineMessage = $lineFormatter->format([
-            'level_name' => 'DEBUG',
-            'channel' => 'default',
-            'context' => [],
-            'datetime' => new \DateTimeImmutable(),
-            'extra' => [],
-            'message' => $xmlOutput,
-        ]);
+        $lineMessage = $lineFormatter->format(new LogRecord(new \DateTimeImmutable(), 'default', Level::Debug, $xmlOutput));
 
         $this->assertEquals($lineMessage, $eppMessage);
     }
@@ -105,24 +93,10 @@ XML;
 </epp>
 XML;
         $eppFormatter = new EPPFormatter('%message%');
-        $eppMessage = $eppFormatter->format([
-            'level_name' => 'DEBUG',
-            'channel' => 'default',
-            'context' => [],
-            'datetime' => new \DateTimeImmutable(),
-            'extra' => [],
-            'message' => $xmlInput,
-        ]);
+        $eppMessage = $eppFormatter->format(new LogRecord(new \DateTimeImmutable(), 'default', Level::Debug, $xmlInput));
 
         $lineFormatter = new LineFormatter('%message%');
-        $lineMessage = $lineFormatter->format([
-            'level_name' => 'DEBUG',
-            'channel' => 'default',
-            'context' => [],
-            'datetime' => new \DateTimeImmutable(),
-            'extra' => [],
-            'message' => $xmlOutput,
-        ]);
+        $lineMessage = $lineFormatter->format(new LogRecord(new \DateTimeImmutable(), 'default', Level::Debug, $xmlOutput));
 
         $this->assertEquals($lineMessage, $eppMessage);
     }
@@ -183,24 +157,10 @@ XML;
 </epp>
 XML;
         $eppFormatter = new EPPFormatter('%message%');
-        $eppMessage = $eppFormatter->format([
-            'level_name' => 'DEBUG',
-            'channel' => 'default',
-            'context' => [],
-            'datetime' => new \DateTimeImmutable(),
-            'extra' => [],
-            'message' => $xmlInput,
-        ]);
+        $eppMessage = $eppFormatter->format(new LogRecord(new \DateTimeImmutable(), 'default', Level::Debug, $xmlInput));
 
         $lineFormatter = new LineFormatter('%message%');
-        $lineMessage = $lineFormatter->format([
-            'level_name' => 'DEBUG',
-            'channel' => 'default',
-            'context' => [],
-            'datetime' => new \DateTimeImmutable(),
-            'extra' => [],
-            'message' => $xmlOutput,
-        ]);
+        $lineMessage = $lineFormatter->format(new LogRecord(new \DateTimeImmutable(), 'default', Level::Debug, $xmlOutput));
 
         $this->assertEquals($lineMessage, $eppMessage);
     }
